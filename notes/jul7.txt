@@ -1,0 +1,19 @@
+Tips for Python Configuration:
+Fast Access to all files:
+Color scheme:
+syntax highlightin
+Static code analysis
+Code completion
+Go to definition
+Refactoring
+Debugging
+1> Install Vim
+2> first .vimrc
+3> Install plugins
+4> Pair Programming
+tips for vim:
+start from scratch
+vimbits.com
+build it
+save .vimrc in GitHub
+
