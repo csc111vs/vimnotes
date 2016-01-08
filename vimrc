@@ -25,9 +25,6 @@ colorscheme xoria256
  set hlsearch
 
 
-
-
-
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -105,3 +102,20 @@ nmap <silent> <C-D> :NERDTreeToggle<CR>
 "let g:syntastic_check_on_wq = 0
 "let g:JSHintHighlightErrorLine = 0
 au BufReadPost *.hbs set syntax=html
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+nnoremap j gj
+nnoremap k gk
+au BufWritePost .vimrc so ~/.vimrc
+let mapleader = ","
+vnoremap < <gv
+vnoremap > >gv
+inoremap kj <Esc>
+cnoremap kj <Esc>
+nnoremap  tn  :tabnew<Space>
+nnoremap  tk  :tabnext<CR>
+nnoremap  tj  :tabprev<CR>
+nnoremap  th  :tabfirst<CR>
+nnoremap  tl  :tablast<CR>
