@@ -1,5 +1,32 @@
-set nocompatible              " be iMproved, required         
-filetype off                  " required 
+" vim options
+ filetype plugin indent on
+ syntax on
+ cabbr te tabedit
+" color xoria256
+"colorscheme desert
+set t_Co=256
+set winwidth=80
+"color xoria256-pluk
+"color C64
+colorscheme xoria256
+" colorscheme solarized
+" set background=dark
+ set expandtab
+ set nocompatible
+ set tabstop=2
+ set shiftwidth=2
+ set showtabline=2
+ set number
+ set wrap
+ set backspace=0
+ set t_Co=256
+ set colorcolumn=+1 " red line and over is error
+ set textwidth=80
+ set hlsearch
+
+
+
+
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -32,7 +59,19 @@ Plugin 'easymotion/vim-easymotion'
 "Plugin 'garbas/vim-snipmate'
 Plugin 'rstacruz/sparkup'
 Plugin 'tpope/vim-surround'
+"Plugin 'scrooloose/syntastic'
+Plugin 'kien/ctrlp.vim'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'jelera/vim-javascript-syntax'
+Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'Raimondi/delimitMate'
+Plugin 'marijnh/tern_for_vim'	" Need to completed installation like YCM
+"Bundle 'xoria256.vim'
+Plugin 'vim-scripts/xoria256.vim'
+Plugin 'flazz/vim-colorschemes'
+"jshint plugin
 
+"Plugin 'wookiehangover/jshint.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -50,7 +89,19 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 syntax enable
 set background=dark
-colorscheme solarized
-autocmd vimenter * NERDTree
+"colorscheme solarized
+"autocmd vimenter * NERDTree
 "let g:nerdtree_tabs_open_on_console_startup=1
 map ; :
+"remap nt NERDTree
+nmap <silent> <C-D> :NERDTreeToggle<CR>
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
+
+"let g:syntastic_always_populate_loc_list = 1
+"let g:syntastic_auto_loc_list = 1
+"let g:syntastic_check_on_open = 1
+"let g:syntastic_check_on_wq = 0
+"let g:JSHintHighlightErrorLine = 0
+au BufReadPost *.hbs set syntax=html
