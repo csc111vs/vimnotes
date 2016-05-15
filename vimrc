@@ -1,5 +1,9 @@
+"Martin Wolf 
+
+
 " vim options
  filetype plugin indent on
+ filetype plugin on
  syntax on
  cabbr te tabedit
 " color xoria256
@@ -41,7 +45,7 @@ Plugin 'VundleVim/Vundle.vim'
 " plugin from http://vim-scripts.org/vim/scripts.html
 "Plugin 'L9'
 " Git plugin not hosted on GitHub
-"Plugin 'git://git.wincent.com/command-t.git'
+Plugin 'git://git.wincent.com/command-t.git'
 " git repos on your local machine (i.e. when working on your own plugin)
 "Plugin 'file:///home/gmarik/path/to/plugin'
 " The sparkup vim script is in a subdirectory of this repo called vim.
@@ -66,9 +70,23 @@ Plugin 'marijnh/tern_for_vim'	" Need to completed installation like YCM
 "Bundle 'xoria256.vim'
 Plugin 'vim-scripts/xoria256.vim'
 Plugin 'flazz/vim-colorschemes'
+" vim sessions
+Plugin 'xolox/vim-misc'
+Plugin 'xolox/vim-session'
 "jshint plugin
-
+"Vim Tmux Navigator
+Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'powerline/powerline'
 "Plugin 'wookiehangover/jshint.vim'
+"Tabularize
+Plugin 'godlygeek/tabular'
+Plugin 'gorkunov/smartpairs.vim'
+Plugin 'tomtom/tcomment_vim'
+Plugin 'vim-scripts/matchit.zip'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'majutsushi/tagbar'
+Plugin 'vim-ruby/vim-ruby'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -119,3 +137,45 @@ nnoremap  tk  :tabnext<CR>
 nnoremap  tj  :tabprev<CR>
 nnoremap  th  :tabfirst<CR>
 nnoremap  tl  :tablast<CR>
+" SCROLLOFF
+" set scrolloff=5
+"
+ " TABS
+ filetype indent on
+ set backspace=indent,eol,start
+ set smarttab
+ set expandtab
+ set softtabstop=2
+ set autoindent
+ set smartindent
+ set indentkeys+=O,o
+
+ " STATUSLINE
+ set laststatus=2
+
+ " SEARCH
+ set ignorecase
+ set smartcase
+ set wrapscan
+
+ set splitright
+ set cursorline
+
+ " WILD MENU
+ set wildmenu
+ set wildignore+=*/.git/*
+ set wildignore+=*/cache/*
+ set wildignore+=*/compiled/*
+ set wildignore+=*/dist/*
+ set wildignore+=*/node_modules/*
+ set wildignore+=npm-debug.log
+ set wildignore+=*.zip
+ set wildignore+=*.png,*.jpg,*.gif
+ set wildignore+=*.pdf
+ set wildignore+=*DS_Store*
+ set wildignore+=*.swp
+ " vim session settings
+ let g:nerdtree_tabs_open_on_gui_startup=0 
+ let g:nerdtree_tabs_open_on_new_tab=0
+ let g:session_autoload = 'yes'
+ let g:session_autosave = 'yes'
